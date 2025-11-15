@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería del Rosario</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#mapa">Ubicación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <h1>PANADERIA DEL ROSARIO</h1>
+        <h2>Sobre nosotros:</h2>
+        <h3>Somos una empresa con 25 años de trayectoria, creando con pasión y tradición panes y productos de la más 
+            alta calidad. Cada día horneamos con dedicación para ofrecer sabores auténticos y frescura que conquistan 
+            a nuestros clientes. En nuestra panadería, la excelencia y el cariño por el oficio son el secreto de cada 
+            receta que compartimos con ustedes.
+        </h3>
+    </header>
+    <main> 
+        <div class="Titulo-producto" id="productos">
+            <h2>NUESTROS PRODUCTOS</h2>
+        </div>
+        <div class="articulos">
+            <div class="producto"> 
+                <h2>Medialunas</h2>
+                <img src="static/img1.jpg" alt="Medialunas">
+            </div>
+        
+            <div class="producto">
+                <h2>Sandwiches</h2>
+                <img src="static/img2.jpg" alt="Sandwiches">
+            </div>
+        
+            <div class="producto">
+                <h2>Pan Varilla</h2>
+                <img src="static/img3.jpg" alt="Pan Barilla">
+            </div>
+        </div>
+
+        <div class="clientes_productos">
+            <h3>NUESTROS CLIENTES Y SUS PRODUCTOS</h3>
+            <div class="db_encabezado ">
+                <p>ID</p>
+                <p>Nombre</p>
+                <p>Apellido</p>
+                <p>ID Producto Cliente</p>
+                <p>Nombre Producto</p>
+                <p>Descripción</p>
+                <p>Precio</p>
+                <p>ID Producto</p>
+            </div>
+
+            {% for row in datos %}
+            <div class="Datos_db ">
+                <p>{{ row.ID }}</p>
+                <p>{{ row.NOMBRE }}</p>
+                <p>{{ row.APELLIDO }}</p>
+                <p>{{ row.ID_PRODUCTO }}</p>
+                <p>{{ row.NOMBRE_PRODUCTO }}</p>
+                <p>{{ row.DESCRIPCION }}</p>
+                <p>{{ row.PRECIO }}</p>
+                <p>{{ row.ID_PRODUCTO }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="website">
+            <h3>Conoce nuestra Institución:</h3>
+            <a href="https://www.colegiorosario.edu.ar/" target="_blank">www.colegiorosario.edu.ar</a>
+        </div>
+
+        <div class="ubicacion" id="mapa">
+            <h2>Aquí nos encontramos !</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.296909773134!2d-60.628581202625256!3d-32.969567599321906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7aa52c4a1bba7%3A0x623c71f7957a3cbf!2sColegio%20Rosario!5e0!3m2!1ses-419!2sar!4v1763159735075!5m2!1ses-419!2sar" width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
+    </main>
+
+    <footer id="contacto">
+        <hr>    <!--significa Horizontal Rule (regla horizontal o linea)-->
+        <h3>Contacto</h3>
+        <p>Dirección: Ocampo 15 Bis, Rosario</p>
+        <p>Teléfono: 123-456-789</p>
+        <p>Email: panaderiadelrosario@mail.com</p>
+    </footer>
+</body>
+</html>
