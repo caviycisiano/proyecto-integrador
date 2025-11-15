@@ -1,0 +1,125 @@
+header{
+    display: flex;
+    flex-direction: column; /*Posiciona todo el contenedor en forma de columna*/
+    text-align: center;     /*Alinea solo los textos (h1,h2,h3....... y p)*/
+}
+
+header nav ul{
+    display: flex;              /* colocar li en una fila */
+    justify-content: center;    /* centrar horizontalmente */
+    align-items: center;
+    gap: 40px;
+    font-style: oblique;
+    font-size: 25px;
+}
+
+header h1{
+    font-family:cursive;
+    font-size:50px;
+    font-weight:bolder;
+    color: rgb(28, 6, 190);
+}
+
+header h2{
+    text-align: left;
+    margin-bottom: -10px;
+}
+
+header h3{
+    text-align: left;
+    font-style: oblique;
+}
+
+.Titulo-producto{
+    display: flex;
+    justify-content: center;
+    color: rgb(193, 7, 214);
+    font-style: oblique;
+    font-size: 20px;
+}
+
+.articulos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.producto {
+    text-align: center;       /* centrar título + imagen */
+}
+
+.producto h2 {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-style: oblique;
+    color: rgb(193, 7, 214);
+}
+
+.producto img {
+    width: 450px;
+    height: 450px;
+    margin-bottom: 120PX;
+}
+
+.clientes_productos {
+    width: 100%;
+}
+
+.clientes_productos h3 {
+    text-align: center;
+}
+
+.db_encabezado{
+    display: grid;
+    grid-template-columns: 50px 120px 120px 550px 150px 200px 100px 100px;
+    gap: 10px;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 0;
+}
+
+.db_encabezado p{
+    font-style: oblique;
+    font-size: 18px;
+    font-weight: 900;
+    color: blue;
+}
+
+.Datos_db  {
+    display: grid;
+    grid-template-columns: 50px 120px 120px 550px 150px 200px 100px 100px;
+    gap: 10px;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 0;
+}
+
+.Datos_db p {
+    margin: 0;
+    padding: 0 5px;
+}
+
+.website {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    gap: 30px;
+}
+
+.ubicacion h2{
+    margin-bottom: 20px;
+}
+
+.ubicacion iframe{
+    margin-bottom: 50px;
+}
+
+footer h3{
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+footer p{
+    color: rgb(0, 0, 255);
+}
